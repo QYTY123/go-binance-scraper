@@ -25,10 +25,10 @@ func WsCombinedAggTradeStreamsDataCollector(symbols []string) {
 func WsCombinedKlineStreamDataCollector(symbolIntervalPair map[string]string) {
 	wsKlineHandler := func(event *binance.WsKlineEvent) {
 		// Persist and print IsFinal data to db and screen only
-		//if event.Kline.IsFinal {
-		//controllers.AddKline(event)
-		fmt.Println(event)
-		//}
+		if event.Kline.IsFinal {
+			//controllers.AddKline(event)
+			fmt.Println(event)
+		}
 	}
 	errHandler := func(err error) {
 		fmt.Println(err)
