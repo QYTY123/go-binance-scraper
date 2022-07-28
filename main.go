@@ -11,7 +11,7 @@ import (
 func main() {
 	// dummy  or empty api and secretkey will be enought for binance socket scraper
 	var APIKEY = utils.GetOSEnv("BINANCE_APIKEY", "YOUR_API_KEY")
-	var SECRETKEY = utils.GetOSEnv("BINANCE_SCRET_KEY", "YOUR_SECRET_KEY")
+	var SECRETKEY = utils.GetOSEnv("BINANCE_SECRET_KEY", "YOUR_SECRET_KEY")
 
 	binanceClient := binance.NewClient(APIKEY, SECRETKEY)
 
